@@ -38,6 +38,11 @@ router.post('/addCategory', (req, res) => {
 
 
 // DELETE category
-
+router.delete('/deleteCategory/:categoryId', (req, res) => {
+    const { categoryId } = req.params
+    const index = categories.findIndex((obj) => obj.id === categoryId)
+    categories.splice(index - 1, 1)
+    res.send(`Category with the id: ${categoryId} was deleted from the database`)
+})
 
 export default router
