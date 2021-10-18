@@ -36,7 +36,7 @@ router.get('/', (req, res) => {
 })
 
 // POST adds new todo to todos
-router.post('/add', (req, res) => {
+router.post('/addTodo', (req, res) => {
     const todo = req.body
     let newId = (todos.length + 1)
     const newTodo = {id: newId, ...todo, complete: false}
@@ -50,7 +50,7 @@ router.post('/add', (req, res) => {
 // DELETE todo
 // router.delete('/delete/:todoId', (req, res) => {
 //     const { todoId }  = req.params
-    
+//     todos = todos.filter(todo) => todo.id !== todoId
 //     res.send(`Todo with the id: ${todoId} was deleted from the database`)
 // })
 
