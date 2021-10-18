@@ -4,10 +4,12 @@
 
 ### GET
 **/todos**
+
 Returns all current saved todos in JSON format
 
 ### POST
 **/todos/addTodo**
+
 Adds a new todo item. When creating the new todo, you only need to give it the key value pairs of "title" and "category" as strings. The id and the complete keys will be completed automatically.
 #### Example
 ```
@@ -31,6 +33,7 @@ Todo item with the title: Mow the lawn was added to the database!
 
 ### DELETE
 **/todos/deleteTodo/{id}**
+
 Removes a todo item with the id specified in the endpoint
 #### Example
 ```
@@ -53,6 +56,7 @@ Current list of todos:
     "category": "Home",
     "complete": false
 }
+
 /todos/deleteTodo/2
 New list of todos:
 {
@@ -72,6 +76,7 @@ Todo item with the id: 2 was deleted from the database
 
 ### GET todos from a specific category
 **/todos/{category}**
+
 Returns all todos in the specified category
 
 ---
@@ -80,10 +85,12 @@ Returns all todos in the specified category
 
 ### GET
 **/categories**
+
 Returns all current saved categories in JSON format
 
 ### POST
 **/todos/addCategory**
+
 Adds a new category. When creating the new category, you only need to give it the key value pair of "category" as a string. The id will be completed automatically.
 #### Example
 ```
@@ -104,6 +111,7 @@ A new category: Personal was added to the database!
 
 ### DELETE
 **/todos/deleteCategory/{id}**
+
 Removes a category with the id specified in the endpoint
 #### Example
 ```
@@ -120,6 +128,7 @@ Current list of categories:
     "id": 3,
     "category": "Work"
 }
+
 /todos/deleteCategory/2
 New list of categories:
 {
