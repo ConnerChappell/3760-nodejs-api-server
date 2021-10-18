@@ -53,6 +53,12 @@ router.post('/addTodo', (req, res) => {
 //     todos = todos.filter(todo) => todo.id !== todoId
 //     res.send(`Todo with the id: ${todoId} was deleted from the database`)
 // })
+router.delete('/deleteTodo/:todoId', (req, res) => {
+    const { todoId } = req.params
+    const index = todos.findIndex((obj) => obj.id === todoId)
+    todos.splice(index - 1, 1)
+    res.send(`Todo item with the id: ${todoId} was deleted from the database`)
+})
 
 // GET todos for a specific category
 router.get('/:category', (req, res) => {
